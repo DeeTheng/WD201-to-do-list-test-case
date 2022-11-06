@@ -1,0 +1,24 @@
+{
+  "name": "wd201-to-do-list-test-cases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todo.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeeTheng/WD201-to-do-list-test-cases.git"
+  },
+  "author": "Dipti Theng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeeTheng/WD201-to-do-list-test-cases/issues"
+  },
+  "homepage": "https://github.com/DeeTheng/WD201-to-do-list-test-cases#readme",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "jest": "^29.2.2"
+  }
+}
