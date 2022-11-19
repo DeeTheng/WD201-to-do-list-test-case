@@ -24,7 +24,7 @@ describe("Test Todo List Function: ", () => {
     let overdueToDoList = overdue();
     expect(
       overdueToDoList.every((todo) => {
-        return todo.dueDate < today;
+        return todo.dueDate < new Date().toLocaleDateString("en-CA");
       })
     ).toBe(true);
   });
@@ -33,7 +33,7 @@ describe("Test Todo List Function: ", () => {
     let toDosDueTodayList = dueToday();
     expect(
       toDosDueTodayList.every((todo) => {
-        return todo.dueDate === today;
+        return todo.dueDate === new Date().toLocaleDateString("en-CA");
       })
     ).toBe(true);
   });
@@ -42,7 +42,7 @@ describe("Test Todo List Function: ", () => {
     let toDosDueLaterList = dueLater();
     expect(
       toDosDueLaterList.every((todo) => {
-        return todo.dueDate > today;
+        return todo.dueDate > new Date().toLocaleDateString("en-CA");
       })
     ).toBe(true);
   });
