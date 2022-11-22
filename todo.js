@@ -14,16 +14,20 @@ const todoList = () => {
 
   const overdue = () => {
     return all.filter(
-      (todo) => compareDate(todo.dueDate) < 0 && !todo.completed
+      (todo) => todo.dueDate < new Date().toLocaleDateString("en-CA")
     );
   };
 
   const dueToday = () => {
-    return all.filter((todo) => compareDate(todo.dueDate) === 0);
+    return all.filter(
+      (todo) => todo.dueDate === new Date().toLocaleDateString("en-CA")
+    );
   };
 
   const dueLater = () => {
-    return all.filter((todo) => compareDate(todo.dueDate) > 0);
+    return all.filter(
+      (todo) => todo.dueDate > new Date().toLocaleDateString("en-CA")
+    );
   };
 
   const toDisplayableList = (list) => {
