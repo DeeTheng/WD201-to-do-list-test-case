@@ -5,12 +5,20 @@ const { all, markAsComplete, add, overdue, dueToday, dueLater } = todoList();
 
 describe("Test Todo List Function: ", () => {
   beforeAll(() => {
-    add({ title: "Submit assignment", dueDate: new Date().toLocaleDateString("en-CA"), completed: false });
+    add({
+      title: "Submit assignment",
+      dueDate: new Date().toLocaleDateString("en-CA"),
+      completed: false,
+    });
   });
 
   test("Test add Method: ", () => {
     let length = all.length;
-    add({ title: "Pay electric bill", dueDate: new Date().toLocaleDateString("en-CA"), completed: false });
+    add({
+      title: "Pay electric bill",
+      dueDate: new Date().toLocaleDateString("en-CA"),
+      completed: false,
+    });
     expect(all.length).toBe(length + 1);
   });
 
